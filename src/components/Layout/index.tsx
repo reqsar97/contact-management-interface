@@ -1,13 +1,13 @@
 import { ChangeEvent, FC } from 'react';
 import Input from '@/components/Input';
-import useUsers from '@/hooks/useUsers';
+import { useUsers } from '@/hooks/queries/useUsers';
 import {
   Link,
   useNavigate,
   useParams,
   useSearch,
 } from '@tanstack/react-router';
-import useDebounce from '@/hooks/useDebounce';
+import useDebounce from '@/hooks/common/useDebounce.ts';
 import Button from '@/components/Button';
 import UserItem from '@/components/Layout/UserItem';
 
@@ -54,9 +54,9 @@ const Layout: FC = () => {
         {users.map((user) => {
           return (
             <UserItem
-              key={user.uuid}
-              active={user.uuid === activeUser}
-              uuid={user.uuid}
+              key={user.id}
+              active={user.id === activeUser}
+              id={user.id}
               name={user.name}
             />
           );

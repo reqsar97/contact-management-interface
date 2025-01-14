@@ -19,10 +19,10 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <div className={'flex'}>
-      <div className={'flex-1'}>
+      <div className={'basis-2/6'}>
         <Layout />
       </div>
-      <div className={'flex-1'}>
+      <div className={'basis-4/6'}>
         <Outlet />
         <TanStackRouterDevtools />
       </div>

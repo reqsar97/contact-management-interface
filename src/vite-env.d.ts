@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface IUser {
-  uuid: string;
+  id: string;
   img: string;
   name: string;
   username: string;
