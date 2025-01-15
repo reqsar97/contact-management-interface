@@ -8,14 +8,15 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "server": "npx json-server -p 3001 db.json"
   },
   "dependencies": {
     "@tanstack/react-form": "^0.41.2",
     "@tanstack/react-query": "^5.64.1",
     "@tanstack/react-router": "^1.95.6",
     "@tanstack/zod-form-adapter": "^0.41.2",
-    "axios": "^1.7.9",
+      "axios": "^1.7.9",
     "clsx": "^2.1.1",
     "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",
