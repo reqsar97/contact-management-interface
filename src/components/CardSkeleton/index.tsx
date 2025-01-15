@@ -2,7 +2,10 @@ import { FC } from 'react';
 
 const CardSkeleton: FC = () => {
   return (
-    <div className="flex flex-wrap items-center gap-8 animate-pulse">
+    <div
+      className="flex flex-wrap items-center gap-8 animate-pulse"
+      data-testid="skeleton-container"
+    >
       <div className="grid bg-gray-300 rounded-lg h-36 w-36 place-items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
