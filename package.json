@@ -19,7 +19,6 @@
     "@tanstack/react-query": "^5.64.1",
     "@tanstack/react-router": "^1.95.6",
     "@tanstack/zod-form-adapter": "^0.41.2",
-    "@testing-library/react-hooks": "^8.0.1",
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
     "json-server": "^1.0.0-beta.3",
