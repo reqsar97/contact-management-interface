@@ -63,6 +63,11 @@ Follow these steps to set up the project on your local machine:
       ```bash
       npm run server
       ```
+    --Or run all together
+    ```bash
+    npm run start:all
+    ```
+
 
 ### Access the Application
 
