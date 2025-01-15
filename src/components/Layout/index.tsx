@@ -51,7 +51,9 @@ const Layout: FC = () => {
           <Button>New</Button>
         </Link>
       </div>
-      <div className={'px-4 flex flex-col'}>
+      <div
+        className={'px-4 flex flex-col max-h-sidebar-content overflow-y-scroll'}
+      >
         {users.map((user) => {
           return (
             <UserItem

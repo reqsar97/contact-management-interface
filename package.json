@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write ./src",
-    "server": "npx json-server -p 3001 db.json"
+    "server": "npx json-server -p 3000 db.json"
   },
   "dependencies": {
     "@tanstack/react-form": "^0.41.2",
