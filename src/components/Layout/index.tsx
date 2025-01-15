@@ -10,6 +10,7 @@ import {
 import useDebounce from '@/hooks/common/useDebounce.ts';
 import Button from '@/components/Button';
 import UserItem from '@/components/Layout/UserItem';
+import { ToastContainer } from 'react-toastify';
 
 const Layout: FC = () => {
   const { search = '' } = useSearch({
@@ -62,6 +63,7 @@ const Layout: FC = () => {
           );
         })}
       </div>
+      <ToastContainer />
     </div>
   );
 };

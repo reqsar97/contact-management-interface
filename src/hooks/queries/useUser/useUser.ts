@@ -5,11 +5,15 @@ import { USER_QUERY_KEY } from '@/hooks/queries/useUser/constants.ts';
 const api = new Api('users');
 
 interface IUseUser {
-  userId: string;
+  userId?: string;
 }
 
 const useUser = ({ userId }: IUseUser) => {
-  const { data: user, isFetching } = useQuery<IUser>({
+  const {
+    data: user,
+    isFetching,
+    isError,
+  } = useQuery<IUser>({
     queryKey: [USER_QUERY_KEY, userId],
     queryFn: async () => {
       const { data } = await api.read<IUser>(`/${userId}`);
@@ -18,7 +22,7 @@ const useUser = ({ userId }: IUseUser) => {
     enabled: !!userId,
   });
 
-  return { user, isFetching };
+  return { user, isFetching, isError };
 };
 
 export default useUser;

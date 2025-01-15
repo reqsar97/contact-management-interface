@@ -8,3 +8,10 @@ interface IUser {
   additional_info: string;
   isFavorite: boolean;
 }
+
+interface IUserCreate {
+  name: string;
+  username: string;
+  additional_info: string;
+  img: string;
+}

@@ -1,11 +1,15 @@
-import { FC, HTMLProps } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps, FC } from 'react';
 import clsx from 'clsx';
 
-interface ButtonProps extends HTMLProps<HTMLButtonElement> {
+interface ButtonProps
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   danger?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({ className, danger, children }) => {
+const Button: FC<ButtonProps> = ({ className, danger, children, ...rest }) => {
   return (
     <button
       className={clsx(
@@ -15,7 +19,7 @@ const Button: FC<ButtonProps> = ({ className, danger, children }) => {
         },
         className
       )}
-      type="button"
+      {...rest}
     >
       {children}
     </button>

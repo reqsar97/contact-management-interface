@@ -22,7 +22,7 @@ function RootComponent() {
       <div className={'basis-2/6'}>
         <Layout />
       </div>
-      <div className={'basis-4/6'}>
+      <div className={'basis-4/6 py-8 px-12'}>
         <Outlet />
         <TanStackRouterDevtools />
       </div>

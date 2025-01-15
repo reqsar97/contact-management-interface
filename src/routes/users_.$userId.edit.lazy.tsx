@@ -1,9 +1,11 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
+import NewUser from '@/pages/NewUser';
 
 export const Route = createLazyFileRoute('/users_/$userId/edit')({
   component: UserEdit,
 });
 
 function UserEdit() {
-  return <div>Hello "/_/$userId/lazy/edit"!</div>;
+  const { userId } = Route.useParams();
+  return <NewUser userId={userId} />;
 }
