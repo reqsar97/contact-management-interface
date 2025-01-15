@@ -42,7 +42,7 @@ const NewUser: FC<{ userId?: string }> = ({ userId }) => {
           <form.Field
             name="name"
             validators={{
-              onChange: nameValidator,
+              onBlur: nameValidator,
               onChangeAsyncDebounceMs: 500,
               onChangeAsync: z.string().refine(async (value) => {
                 await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -52,7 +52,7 @@ const NewUser: FC<{ userId?: string }> = ({ userId }) => {
             children={(field) => {
               return (
                 <>
-                  <label htmlFor={field.name}>First Name:</label>
+                  <label htmlFor={field.name}>Name*:</label>
                   <Input
                     placeholder="Name"
                     id={field.name}
@@ -73,7 +73,7 @@ const NewUser: FC<{ userId?: string }> = ({ userId }) => {
             children={(field) => {
               return (
                 <>
-                  <label htmlFor={field.name}>Username:</label>
+                  <label htmlFor={field.name}>Username*:</label>
                   <Input
                     placeholder="Username"
                     id={field.name}
@@ -129,7 +129,7 @@ const NewUser: FC<{ userId?: string }> = ({ userId }) => {
             children={(field) => {
               return (
                 <div className={'flex flex-col'}>
-                  <label htmlFor={field.name}>Image:</label>
+                  <label htmlFor={field.name}>Image*:</label>
                   <input
                     type="file"
                     id={field.name}
