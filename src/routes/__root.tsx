@@ -9,7 +9,6 @@ type UsersSearch = {
 export const Route = createRootRoute({
   component: RootComponent,
   validateSearch: (search: Record<string, unknown>): UsersSearch => {
-    // validate and parse the search params into a typed state
     return {
       search: (search.search as string) || '',
     };

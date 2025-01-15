@@ -39,7 +39,6 @@ const NewUser: FC<{ userId?: string }> = ({ userId }) => {
         }}
       >
         <div>
-          {/* A type-safe field component*/}
           <form.Field
             name="name"
             validators={{
@@ -51,7 +50,6 @@ const NewUser: FC<{ userId?: string }> = ({ userId }) => {
               }),
             }}
             children={(field) => {
-              // Avoid hasty abstractions. Render props are great!
               return (
                 <>
                   <label htmlFor={field.name}>First Name:</label>
